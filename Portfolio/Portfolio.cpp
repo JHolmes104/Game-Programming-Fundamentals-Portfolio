@@ -1,73 +1,59 @@
 #include <iostream>
 using namespace std;
 
+void leapYear()
+{
+	int year;
+	int fourRem;
+	int hundredRem;
+	int fourHunrem;
+
+	cout << "Enter the year: " << endl;
+	cin >> year;
+
+	fourRem = year % 4;
+	hundredRem = year % 100;
+	fourHunrem = year % 400;
+
+	if ((fourRem == 0 && hundredRem != 0) || (hundredRem == 0 && fourHunrem == 0))
+	{
+		cout << "The year is a leap year" << endl;
+	}
+
+	else
+	{
+		cout << "The year is not a leap year" << endl;
+	}
+
+}
+
 void worksheetTaskSelect()
 {
 	char task;
 	do
 	{
 		cout << "Which task would you like to run?" << endl;
-	} while (task != 'Q');
-}
-
-void week1()
-{
-	int task = 10;
-
-	do
-	{
-		cout << "Which task would you like to run:" << endl;
-		cout << "0)\tQuit" << endl;
-		cout << "1)\tHello world" << endl;
-		cout << "2)\tUser Input" << endl;
+		cout << "1)\tCalculate if a given year is a leap year" << endl;
+		cout << "Q)\tQuit" << endl;
 		cin >> task;
 		switch (task)
 		{
-			case 0:
-				break;
-			case 1:
-				break;
-			case 2:
-				break;
-		}
-	} while (task != 0);
-}
-
-void weekSelect()
-{
-	char week;
-	do
-	{
-		cout << "Which week would you like to choose from:" << endl;
-		cout << "1)\tWeek 1" << endl;
-		cout << "2)\tWeek 2" << endl;
-		cout << "3)\tWeek 3" << endl;
-		cout << "Q)\tQuit" << endl;
-		cin >> week;
-
-		switch (week)
-		{
 			case '1':
-				week1();
-				break;
-			case '2':
-				break;
-			case '3':
+				leapYear();
 				break;
 			case 'q':
 			case 'Q':
 				break;
 			default:
-				cout << "Invalid input. Please try again.";
+				cout << "Invalid Input. Please try again." << endl;
 				break;
 		}
-
-	} while (week != 'Q' && week != 'q');
+	} while (task != 'Q' && task != 'q');
 }
 
 int main()
 {
-	weekSelect();
+	worksheetTaskSelect();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
