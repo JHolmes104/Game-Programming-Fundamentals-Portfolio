@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+void worksheetTaskSelect()
+{
+	char task;
+	do
+	{
+		cout << "Which task would you like to run?" << endl;
+	} while (task != 'Q');
+}
+
 void week1()
 {
 	int task = 10;
