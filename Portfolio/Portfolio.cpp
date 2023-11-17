@@ -96,6 +96,107 @@ void oddsAndPrimes()
 	cout << endl;
 }
 
+void catDoor()
+{
+	bool innerDoor;
+	bool outerDoor;
+
+	bool validInnerInput = false;
+	bool validOuterInput = false;
+	
+	do
+	{
+		cout << "Is the inner door closed? (Y/N)" << endl;
+		
+		char choice;
+		cin >> choice;
+		switch (choice)
+		{
+			case 'y':
+			case 'Y':
+				innerDoor = true;
+				validInnerInput = true;
+				break;
+			case 'n':
+			case 'N':
+				innerDoor = false;
+				validInnerInput = true;
+				break;
+			default:
+				cout << "Invalid Input. please try again." << endl;
+		}
+
+	} while (validInnerInput == false);
+
+	do
+	{
+		cout << "Is the outer door closed? (Y/N)" << endl;
+
+		char choice;
+		cin >> choice;
+		switch (choice)
+		{
+		case 'y':
+		case 'Y':
+			outerDoor = true;
+			validOuterInput = true;
+			break;
+		case 'n':
+		case 'N':
+			outerDoor = false;
+			validOuterInput = true;
+			break;
+		default:
+			cout << "Invalid Input. please try again." << endl;
+		}
+
+	} while (validOuterInput == false);
+
+	if (outerDoor == false && innerDoor == false)
+	{
+		cout << "The cat has escaped!" << endl;
+	}
+	else
+	{
+		cout << "The cat is still inside." << endl;
+	}
+}
+
+void fizzBuzz()
+{
+	int value;
+	int threeMod;
+	int fiveMod;
+
+	cout << "Enter a number: " << endl;
+	cin >> value;
+
+	threeMod = value % 3;
+	fiveMod = value % 5;
+
+	system("cls");
+
+	if (threeMod == 0 && fiveMod == 0)
+	{
+		cout << "Fizz buzz" << endl;
+	}
+	else
+	{
+		if (threeMod == 0)
+		{
+			cout << "Fizz" << endl;
+		}
+		else if (fiveMod == 0)
+		{
+			cout << "Buzz" << endl;
+		}
+		else
+		{
+			cout << value << endl;
+		}
+	}
+}
+
 void worksheetTaskSelect()
 {
 	char task;
@@ -104,6 +205,8 @@ void worksheetTaskSelect()
 		cout << "Which task would you like to run?" << endl;
 		cout << "1)\tCalculate if a given year is a leap year" << endl;
 		cout << "2)\tGive a list of numbers and return odd and prime numbers from the list" << endl;
+		cout << "3)\tCat Door" << endl;
+		cout << "4)\tFizz Buzz" << endl;
 		cout << "Q)\tQuit" << endl;
 		cin >> task;
 		system("cls");
@@ -115,6 +218,10 @@ void worksheetTaskSelect()
 			case '2':
 				oddsAndPrimes();
 				break;
+			case '3':
+				catDoor();
+			case '4':
+				fizzBuzz();
 			case 'q':
 			case 'Q':
 				break;
