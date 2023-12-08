@@ -3,23 +3,26 @@ using namespace std;
 
 void leapYear()
 {
+	//Initialise variables
 	int year;
 	int fourRem;
 	int hundredRem;
 	int fourHunrem;
 
+	//Take the user's input
 	cout << "Enter the year: " << endl;
 	cin >> year;
 
+	//Perform necessary calculations
 	fourRem = year % 4;
 	hundredRem = year % 100;
 	fourHunrem = year % 400;
 
+	//Check if the year is a leap year
 	if ((fourRem == 0 && hundredRem != 0) || (hundredRem == 0 && fourHunrem == 0))
 	{
 		cout << "The year is a leap year" << endl;
 	}
-
 	else
 	{
 		cout << "The year is not a leap year" << endl;
@@ -28,6 +31,7 @@ void leapYear()
 
 void oddsAndPrimes()
 {
+	//Initialise arrays
 	int size;
 	cout << "How big do you want the final array to be?" << endl;
 	cin >> size;
@@ -41,6 +45,7 @@ void oddsAndPrimes()
 
 	for (int i = 0; i < size; i++)
 	{
+		//Take the user's input
 		cout << "Enter a value for the array: " << endl;
 		cin >> array[i];
 
@@ -377,7 +382,7 @@ void worksheetTaskSelect()
 		cout << "6)\tTake an input of 2 numbers and perform a calculation of the user's choice" << endl;
 		cout << "7)\tPrint the size of each data type" << endl;
 		cout << "8)\tCalculate the distance between 2 coordinates" << endl;
-		cout << "9)\tCreate an int variable and output its memory address" << endl;
+		cout << "9)\tCreate a variable and output its memory address" << endl;
 		cout << "Q)\tQuit" << endl;
 
 		cin >> task;
