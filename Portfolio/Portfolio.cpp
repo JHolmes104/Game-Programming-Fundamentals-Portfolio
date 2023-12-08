@@ -356,6 +356,13 @@ void distanceBetweenPoints()
 	cout << "The distance between the two points is " << distance << endl;
 }
 
+void reference()
+{
+	int a = 20;
+
+	cout << "The memory address of a is " << &a << endl;
+}
+
 void worksheetTaskSelect()
 {
 	char task;
@@ -370,6 +377,7 @@ void worksheetTaskSelect()
 		cout << "6)\tTake an input of 2 numbers and perform a calculation of the user's choice" << endl;
 		cout << "7)\tPrint the size of each data type" << endl;
 		cout << "8)\tCalculate the distance between 2 coordinates" << endl;
+		cout << "9)\tCreate an int variable and output its memory address" << endl;
 		cout << "Q)\tQuit" << endl;
 
 		cin >> task;
@@ -401,6 +409,8 @@ void worksheetTaskSelect()
 			case '8':
 				distanceBetweenPoints();
 				break;
+			case '9':
+				reference();
 			case 'q':
 			case 'Q':
 				break;
