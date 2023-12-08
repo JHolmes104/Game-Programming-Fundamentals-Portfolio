@@ -306,6 +306,56 @@ void userInput()
 	cout << "You have quit the program" << endl;
 }
 
+void typeSize()
+{
+	cout << "The size of an int is: " << sizeof(int) << endl;
+
+	cout << "The size of a char is: " << sizeof(char) << endl;
+
+	cout << "The size of an unsigned int is: " << sizeof(unsigned) << endl;
+
+	cout << "The size of a float is: " << sizeof(float) << endl;
+
+	cout << "The size of a double is: " << sizeof(double) << endl;
+
+	cout << "The size of a bool is: " << sizeof(bool) << endl;
+
+	cout << "The size of a char* is: " << sizeof(char*) << endl;
+
+	cout << "The size of an int* is: " << sizeof(int*) << endl;
+}
+
+void distanceBetweenPoints()
+{
+	int x1;
+	int y1;
+
+	int x2;
+	int y2;
+
+	int xDif;
+	int yDif;
+
+	cout << "Enter the first x coordinate: " << endl;
+	cin >> x1;
+
+	cout << "Enter the first y coordinate: " << endl;
+	cin >> y1;
+
+	cout << "Enter the second x coordinate: " << endl;
+	cin >> x2;
+
+	cout << "Enter the second y coordinate: " << endl;
+	cin >> y2;
+
+	xDif = x2 - x1;
+	yDif = y2 - y1;
+
+	float distance = sqrt(pow(xDif, 2) + pow(yDif, 2));
+
+	cout << "The distance between the two points is " << distance << endl;
+}
+
 void worksheetTaskSelect()
 {
 	char task;
@@ -318,9 +368,13 @@ void worksheetTaskSelect()
 		cout << "4)\tFizz Buzz" << endl;
 		cout << "5)\tCalculate a students grade based on a total of 6 modules" << endl;
 		cout << "6)\tTake an input of 2 numbers and perform a calculation of the user's choice" << endl;
+		cout << "7)\tPrint the size of each data type" << endl;
+		cout << "8)\tCalculate the distance between 2 coordinates" << endl;
 		cout << "Q)\tQuit" << endl;
+
 		cin >> task;
 		system("cls");
+
 		switch (task)
 		{
 			case '1':
@@ -340,6 +394,12 @@ void worksheetTaskSelect()
 				break;
 			case '6':
 				userInput();
+				break;
+			case '7':
+				typeSize();
+				break;
+			case '8':
+				distanceBetweenPoints();
 				break;
 			case 'q':
 			case 'Q':
