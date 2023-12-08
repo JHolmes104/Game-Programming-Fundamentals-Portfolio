@@ -353,6 +353,7 @@ void typeSize()
 
 void distanceBetweenPoints()
 {
+	//Initialise variables
 	int x1;
 	int y1;
 
@@ -362,6 +363,7 @@ void distanceBetweenPoints()
 	int xDif;
 	int yDif;
 
+	//Take the user's inputs
 	cout << "Enter the first x coordinate: " << endl;
 	cin >> x1;
 
@@ -374,9 +376,11 @@ void distanceBetweenPoints()
 	cout << "Enter the second y coordinate: " << endl;
 	cin >> y2;
 
+	//Calculate difference bertween the points
 	xDif = x2 - x1;
 	yDif = y2 - y1;
 
+	//Use Pythagoras to calculate distance and output the result
 	float distance = sqrt(pow(xDif, 2) + pow(yDif, 2));
 
 	cout << "The distance between the two points is " << distance << endl;
@@ -384,6 +388,7 @@ void distanceBetweenPoints()
 
 void reference()
 {
+	//Create an int variable and output its memory address
 	int a = 20;
 
 	cout << "The memory address of a is " << &a << endl;
