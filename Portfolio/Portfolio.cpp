@@ -197,6 +197,115 @@ void fizzBuzz()
 	}
 }
 
+void computeGrade()
+{
+	int score = 0;
+	int failedModules = 0;
+	
+	for (int i = 0; i < 6; i++)
+	{
+		cout << "Enter the student's score for this module: " << endl;
+		int moduleScore;
+		cin >> moduleScore;
+		if (moduleScore < 40)
+		{
+			failedModules++;
+		}
+		score += moduleScore;
+	}
+	
+	score /= 6;
+	cout << "The students average score is " << score << "%" << endl;
+	
+	if (score >= 85)
+	{
+		cout << "The students average grade is an A*" << endl;
+	}
+	 else if (score >= 70 && score <= 84)
+	{
+		cout << "The students average grade is an A" << endl;
+	}
+	else if (score >= 60 && score <= 69)
+	{
+		cout << "The students average grade is a B" << endl;
+	}
+	else if (score >= 50 && score <= 59)
+	{
+		cout << "The students average grade is a C" << endl;
+	}
+	else if (score >= 40 && score <= 49)
+	{
+		cout << "The students average grade is a D" << endl;
+	}
+	else if (score >= 39 && score <= 30)
+	{
+		cout << "The students average grade is an E" << endl;
+	}
+	else if (score <= 29)
+	{
+			cout << "The students average grade is a F" << endl;
+	}
+
+	if (failedModules == 0)
+	{
+		cout << "The student has not failed any modules and has passed the year" << endl;
+	}
+	else
+	{
+		cout << "The student has failed " << failedModules << " modules and has not passed the year" << endl;
+	}
+}
+
+void userInput()
+{
+	int value1;
+	int value2;
+	char choice;
+
+	cout << "Enter the first value:" << endl;
+	cin >> value1;
+
+	cout << "Enter the second value:" << endl;
+	cin >> value2;
+
+	do
+	{
+		cout << "What do you want to do with the values" << endl;
+		cout << "1 - Add them" << endl;
+		cout << "2 - Multiply them" << endl;
+		cout << "3 - Divide them" << endl;
+		cout << "Q - Exit" << endl;
+
+		cin >> choice;
+		system("cls");
+		int total;
+		switch (choice)
+		{
+		case 'q':
+		case 'Q':
+			break;
+		case '1':
+			total = value1 + value2;
+			cout << value1 << " + " << value2 << " = " << total << endl;
+			break;
+		case '2':
+			total = value1 * value2;
+			cout << value1 << " * " << value2 << " = " << total << endl;
+			break;
+		case '3':
+			total = value1 / value2;
+			cout << value1 << " / " << value2 << " = " << total << endl;
+			break;
+		default:
+			cout << "That is not a valid option" << endl;
+			break;
+		}
+
+	} while (choice != 'Q' && choice != 'q');
+
+	cout << "You have quit the program" << endl;
+}
+
 void worksheetTaskSelect()
 {
 	char task;
@@ -207,6 +316,8 @@ void worksheetTaskSelect()
 		cout << "2)\tGive a list of numbers and return odd and prime numbers from the list" << endl;
 		cout << "3)\tCat Door" << endl;
 		cout << "4)\tFizz Buzz" << endl;
+		cout << "5)\tCalculate a students grade based on a total of 6 modules" << endl;
+		cout << "6)\tTake an input of 2 numbers and perform a calculation of the user's choice" << endl;
 		cout << "Q)\tQuit" << endl;
 		cin >> task;
 		system("cls");
@@ -220,8 +331,16 @@ void worksheetTaskSelect()
 				break;
 			case '3':
 				catDoor();
+				break;
 			case '4':
 				fizzBuzz();
+				break;
+			case '5':
+				computeGrade();
+				break;
+			case '6':
+				userInput();
+				break;
 			case 'q':
 			case 'Q':
 				break;
