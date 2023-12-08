@@ -279,10 +279,12 @@ void computeGrade()
 
 void userInput()
 {
+	//Initialise variables
 	int value1;
 	int value2;
 	char choice;
 
+	//Take the user's inputs
 	cout << "Enter the first value:" << endl;
 	cin >> value1;
 
@@ -291,12 +293,14 @@ void userInput()
 
 	do
 	{
+		//Output the menu
 		cout << "What do you want to do with the values" << endl;
 		cout << "1 - Add them" << endl;
 		cout << "2 - Multiply them" << endl;
 		cout << "3 - Divide them" << endl;
 		cout << "Q - Exit" << endl;
 
+		//Take the user's input and perform the correct calculation
 		cin >> choice;
 		system("cls");
 		int total;
@@ -329,6 +333,7 @@ void userInput()
 
 void typeSize()
 {
+	//Output the size of each data type
 	cout << "The size of an int is: " << sizeof(int) << endl;
 
 	cout << "The size of a char is: " << sizeof(char) << endl;
