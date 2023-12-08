@@ -49,12 +49,14 @@ void oddsAndPrimes()
 		cout << "Enter a value for the array: " << endl;
 		cin >> array[i];
 
+		//Check if the user's input is odd
 		if (array[i] % 2 == 1)
 		{
 			oddArray[oddArrayCurrentSize] = array[i];
 			oddArrayCurrentSize++;
 		}
 
+		//Check if the user's input is a prime number
 		if (array[i] != 0 && array[i] != 1)
 		{
 			if (array[i] == 2)
@@ -86,6 +88,7 @@ void oddsAndPrimes()
 
 	system("cls");
 
+	//Output odd numbers and prime numbers.
 	cout << "The odd numbers in the array are: " << endl;
 	for (int i = 0; i < oddArrayCurrentSize; i++)
 	{
