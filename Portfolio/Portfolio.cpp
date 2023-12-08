@@ -88,7 +88,7 @@ void oddsAndPrimes()
 
 	system("cls");
 
-	//Output odd numbers and prime numbers.
+	//Output odd numbers and prime numbers
 	cout << "The odd numbers in the array are: " << endl;
 	for (int i = 0; i < oddArrayCurrentSize; i++)
 	{
@@ -106,12 +106,14 @@ void oddsAndPrimes()
 
 void catDoor()
 {
+	//Initialise variables
 	bool innerDoor;
 	bool outerDoor;
 
 	bool validInnerInput = false;
 	bool validOuterInput = false;
 	
+	//Validate input for the innerDoor's state
 	do
 	{
 		cout << "Is the inner door closed? (Y/N)" << endl;
@@ -136,6 +138,7 @@ void catDoor()
 
 	} while (validInnerInput == false);
 
+	//Validate input for the outerDoor's state
 	do
 	{
 		cout << "Is the outer door closed? (Y/N)" << endl;
@@ -160,6 +163,7 @@ void catDoor()
 
 	} while (validOuterInput == false);
 
+	//Output the correct response
 	if (outerDoor == false && innerDoor == false)
 	{
 		cout << "The cat has escaped!" << endl;
@@ -172,6 +176,7 @@ void catDoor()
 
 void fizzBuzz()
 {
+	//Initialise variables
 	int value;
 	int threeMod;
 	int fiveMod;
