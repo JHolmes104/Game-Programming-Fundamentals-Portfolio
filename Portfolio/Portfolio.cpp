@@ -396,9 +396,11 @@ void reference()
 
 void worksheetTaskSelect()
 {
+	//Start while loop
 	char task;
 	do
 	{
+		//Output menu options
 		cout << "Which task would you like to run?" << endl;
 		cout << "1)\tCalculate if a given year is a leap year" << endl;
 		cout << "2)\tGive a list of numbers and return odd and prime numbers from the list" << endl;
@@ -411,9 +413,11 @@ void worksheetTaskSelect()
 		cout << "9)\tCreate a variable and output its memory address" << endl;
 		cout << "Q)\tQuit" << endl;
 
+		//Take the user's input
 		cin >> task;
 		system("cls");
 
+		//Execute the correct task
 		switch (task)
 		{
 			case '1':
