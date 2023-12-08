@@ -181,14 +181,17 @@ void fizzBuzz()
 	int threeMod;
 	int fiveMod;
 
+	//Take the user's input
 	cout << "Enter a number: " << endl;
 	cin >> value;
 
+	//Perform calcultions
 	threeMod = value % 3;
 	fiveMod = value % 5;
 
 	system("cls");
 
+	//Print the correct response
 	if (threeMod == 0 && fiveMod == 0)
 	{
 		cout << "Fizz buzz" << endl;
@@ -212,9 +215,11 @@ void fizzBuzz()
 
 void computeGrade()
 {
+	//initialise variables
 	int score = 0;
 	int failedModules = 0;
 	
+	//Input the student's scores
 	for (int i = 0; i < 6; i++)
 	{
 		cout << "Enter the student's score for this module: " << endl;
@@ -227,9 +232,11 @@ void computeGrade()
 		score += moduleScore;
 	}
 	
+	//Calculate the mean score
 	score /= 6;
 	cout << "The students average score is " << score << "%" << endl;
 	
+	//Calculate the student's grade
 	if (score >= 85)
 	{
 		cout << "The students average grade is an A*" << endl;
@@ -259,6 +266,7 @@ void computeGrade()
 			cout << "The students average grade is a F" << endl;
 	}
 
+	//Check if the student has passed
 	if (failedModules == 0)
 	{
 		cout << "The student has not failed any modules and has passed the year" << endl;
